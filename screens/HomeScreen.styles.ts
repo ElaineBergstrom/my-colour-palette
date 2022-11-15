@@ -9,9 +9,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    
   },
   colourList: {
+    marginTop: 20,
     height: vh(60),
     width: vw(75),
     justifyContent: 'center',

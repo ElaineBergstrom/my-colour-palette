@@ -1,18 +1,27 @@
 import React from 'react';
-import {View, Text, StyleSheet, Pressable} from 'react-native';
+import {View, Text, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
 import {COLOR_BLACK, COLOR_WHITE} from '../../theme/colors';
+import FavoriteButton from '../Buttons/FavoriteButton/FavoriteButton';
 
 interface Props {
+  favoriteState: boolean;
+  onPressFavorite: () => void;
   onPress: () => void;
 }
 
-const ColourBlock: React.FC<Props> = ({onPress}) => {
-  const text = 'HeX WORLD';
+//Note: Look into better way to place button for favoriting
+const ColourBlock: React.FC<Props> = ({onPress, favoriteState, onPressFavorite}) => {
+  const text = '#d53032';
   return (
-    <Pressable style={styles.container} onPress={onPress}>
-      <Text style={styles.titleText}>{text}</Text>
-      <View style={{backgroundColor: 'blue', height: '100%', width: '100%'}} />
-    </Pressable>
+    <>
+      <TouchableOpacity style={styles.container} onPress={onPress}>
+        <Text style={styles.titleText}>{text}</Text>
+        <View style={{backgroundColor: '#d53032', height: '100%', width: '100%'}} />
+      </TouchableOpacity>
+      <View style={styles.favorite}>
+        <FavoriteButton favoriteState={favoriteState} onPressFavorite={onPressFavorite} />
+      </View>
+    </>
   );
 };
 
@@ -36,6 +45,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: COLOR_WHITE,
     zIndex: 5,
+  },
+  favorite: {
+    padding: 10,
+    position: 'absolute',
+    right: 0,
+    top: 150,
+    zIndex: 6,
   },
 });
 

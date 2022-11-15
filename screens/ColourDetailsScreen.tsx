@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import BackgroundShape from '../components/Background/BackgroundShape';
-import BackButton from '../components/Buttons/BackButton/BackButton';
-import {COLOR_BACKGROUND_SHAPES, COLOR_GREYBLUE, COLOR_WHITE} from '../theme/colors';
+import {COLOR_BACKGROUND_SHAPES, COLOR_WHITE} from '../theme/colors';
 import {vh} from '../utils/StyleUtils';
 
 const ColourDetailScreen = () => {

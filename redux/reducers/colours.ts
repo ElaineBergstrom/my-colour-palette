@@ -47,6 +47,7 @@ export default slice.reducer;
 //Action Creators
 const url = '/colours';
 
+//NOTE: Look into TS with Redux differnces...
 // export const fetchColourList = (dispatch) => {
 //   return dispatch(
 //     apiFetchBegan({

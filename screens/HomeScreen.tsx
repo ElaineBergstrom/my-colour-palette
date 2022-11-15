@@ -9,7 +9,8 @@ import {styles} from './HomeScreen.styles';
 const HomeScreen = () => {
   const [showList, setShowList] = useState(false);
   const [sortList, setSortList] = useState(false);
-  const [colourList, setColourList] = useState([]);
+  const [favorite, setFavorite] = useState(false);
+  // const [colourList, setColourList] = useState([]);
 
   const navigation = useNavigation();
 
@@ -29,12 +30,22 @@ const HomeScreen = () => {
     navigation.navigate('ColourDetails');
   };
 
+  const onPressFavorite = () => {
+    setFavorite(!favorite);
+  };
+
   return (
     <View style={styles.backgroundContainer}>
       <Header />
       <View style={styles.colourList}>
         {!showList && (
-          <ColoursList sortState={sortList} onSortList={handleSortList} onColourPress={handleColourBlockPress} />
+          <ColoursList
+            favoriteState={favorite}
+            onPressFavorite={onPressFavorite}
+            sortState={sortList}
+            onSortList={handleSortList}
+            onColourPress={handleColourBlockPress}
+          />
         )}
       </View>
       <Footer showList={showList} onPressShowList={onPressShowList} />

@@ -5,15 +5,17 @@ import ColourBlock from './ColourBlock';
 
 interface Props {
   sortState: boolean;
+  favoriteState: boolean;
+  onPressFavorite: () => void
   onSortList: () => void;
   onColourPress: () => void;
 }
 
-const ColoursList: React.FC<Props> = ({sortState, onSortList, onColourPress}) => {
+const ColoursList: React.FC<Props> = ({sortState, onSortList, onColourPress, onPressFavorite, favoriteState}) => {
   return (
     <View style={styles.container}>
       <SearchBar sortState={sortState} onPressSort={onSortList} />
-      <ColourBlock onPress={onColourPress} />
+      <ColourBlock onPressFavorite={onPressFavorite} favoriteState={favoriteState} onPress={onColourPress} />
     </View>
   );
 };

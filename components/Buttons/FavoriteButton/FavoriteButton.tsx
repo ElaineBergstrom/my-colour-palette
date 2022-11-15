@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, StyleSheet} from 'react-native';
-import FullHeart from '../../../assets/icons/FillHeart.svg';
 import LineHeart from '../../../assets/icons/EmptyHeart.svg';
+import FullHeart from '../../../assets/icons/FillHeart.svg';
 import {COLOR_WHITE} from '../../../theme/colors';
 
 interface Props {
@@ -10,12 +10,13 @@ interface Props {
 }
 
 const FavoriteButton: React.FC<Props> = ({favoriteState, onPressFavorite}) => {
-  if (!favoriteState){
-  return (
-    <Pressable style={styles.buttonContainer} onPress={onPressFavorite}>
-      <LineHeart height={20} width={20} fill={COLOR_WHITE} />
-    </Pressable>
-  );} else {
+  if (!favoriteState) {
+    return (
+      <Pressable style={styles.buttonContainer} onPress={onPressFavorite}>
+        <LineHeart height={20} width={20} fill={COLOR_WHITE} />
+      </Pressable>
+    );
+  } else {
     return (
       <Pressable style={styles.buttonContainer} onPress={onPressFavorite}>
         <FullHeart height={20} width={20} fill={COLOR_WHITE} />
@@ -27,6 +28,7 @@ const FavoriteButton: React.FC<Props> = ({favoriteState, onPressFavorite}) => {
 const styles = StyleSheet.create({
   buttonContainer: {
     alignItems: 'center',
+    zIndex: 6,
   },
 });
 
