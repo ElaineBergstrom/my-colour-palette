@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Pressable, TouchableOpacity} from 'react-native';
 import {COLOR_BLACK, COLOR_WHITE} from '../../theme/colors';
-import FavoriteButton from '../Buttons/FavoriteButton/FavoriteButton';
+import FavoriteButton from '../Buttons/FavoriteButton/FavoriteButton'
 
 interface Props {
   favoriteState: boolean;

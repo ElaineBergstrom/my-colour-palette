@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import SearchBar from '../Search/SearchBar';
+import SearchBar from '../Search/SearchBar'
 import ColourBlock from './ColourBlock';
 
 interface Props {
   sortState: boolean;
   favoriteState: boolean;
-  onPressFavorite: () => void
+  onPressFavorite: () => void;
   onSortList: () => void;
   onColourPress: () => void;
 }

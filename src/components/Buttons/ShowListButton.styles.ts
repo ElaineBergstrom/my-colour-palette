@@ -1,9 +1,9 @@
 import {StyleSheet} from 'react-native';
-import {COLOR_WHITE} from '../../theme/colors';
+import {COLOR_WHITE} from '../../src/theme/colors';
 
 export const styles = StyleSheet.create({
   buttonContainer: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 45,
     justifyContent: 'center',
     alignItems: 'center',

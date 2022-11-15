@@ -2,7 +2,7 @@ import React from 'react';
 import {Pressable} from 'react-native';
 import ClosedEye from '../../assets/icons/EyeClosed.svg';
 import OpenedEye from '../../assets/icons/EyeOpened.svg';
-import {COLOR_BLACK} from '../../theme/colors';
+import {COLOR_BLACK} from '../../src/theme/colors';
 import {styles} from './ShowListButton.styles';
 
 interface Props {

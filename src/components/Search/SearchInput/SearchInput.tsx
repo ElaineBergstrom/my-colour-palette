@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, TextInput, View} from 'react-native';
-import {COLOR_GREYBLUE, COLOR_WHITE} from '../../../theme/colors';
 import Search from '../../../assets/icons/Search.svg';
+import {COLOR_GREYBLUE, COLOR_WHITE} from '../../../theme/colors';
 
 // interface Props {
 //   onChange: () => void;
 // }
 
 const SearchInput = () => {
+  const [searchWord, setSearchWord] = useState<string>('');
+
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
@@ -15,9 +17,10 @@ const SearchInput = () => {
       </View>
       <TextInput
         style={styles.input}
+        value={searchWord}
+        onChangeText={event => setSearchWord(event.target.value)}
         placeholder="Search..."
         placeholderTextColor={COLOR_GREYBLUE}
-        // onChange={onChange}
       />
     </View>
   );

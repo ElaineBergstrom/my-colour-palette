@@ -2,7 +2,8 @@ import React from 'react';
 import {Pressable, StyleSheet} from 'react-native';
 import LineHeart from '../../../assets/icons/EmptyHeart.svg';
 import FullHeart from '../../../assets/icons/FillHeart.svg';
-import {COLOR_WHITE} from '../../../theme/colors';
+import { COLOR_WHITE } from '../../../theme/colors';
+
 
 interface Props {
   favoriteState: boolean;

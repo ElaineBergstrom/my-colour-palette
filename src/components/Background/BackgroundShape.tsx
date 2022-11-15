@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {COLOR_BACKGROUND_SHAPES, COLOR_WHITE} from '../../theme/colors';
-import {vw} from '../../utils/StyleUtils';
+import { COLOR_BACKGROUND_SHAPES, COLOR_WHITE } from '../../theme/colors';
+
+import {vw} from '../../utils/StyleUtils'
 
 //NOTE: Set up color to be passsed as a prop.
 const BackgroundShape = () => {

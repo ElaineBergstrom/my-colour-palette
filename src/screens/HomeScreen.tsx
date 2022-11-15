@@ -2,8 +2,8 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {View} from 'react-native';
 import ColoursList from '../components/ColoursList/ColoursList';
-import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
 import {styles} from './HomeScreen.styles';
 
 const HomeScreen = () => {

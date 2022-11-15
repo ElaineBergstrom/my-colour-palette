@@ -1,7 +1,8 @@
 import React from 'react';
 import {Pressable, StyleSheet} from 'react-native';
 import ArrowLeft from '../../../assets/icons/ArrowLeft.svg';
-import {COLOR_WHITE} from '../../../theme/colors';
+import { COLOR_WHITE } from '../../../theme/colors';
+
 
 interface Props {
   onGoBack: () => void;

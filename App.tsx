@@ -1,12 +1,12 @@
 import {NavigationContainer} from '@react-navigation/native';
-import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import {Provider} from 'react-redux';
-import store from './redux/configureStore';
-import ColourDetailScreen from './screens/ColourDetailsScreen';
-import HomeScreen from './screens/HomeScreen';
-import {vh} from './utils/StyleUtils';
+import ColourDetailScreen from './src/screens/ColourDetailsScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import store from './src/store/configureStore';
+import {vh} from './src/utils/StyleUtils';
 
 const RootStack = createNativeStackNavigator();
 
