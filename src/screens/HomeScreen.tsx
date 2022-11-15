@@ -9,6 +9,7 @@ import {styles} from './HomeScreen.styles';
 const HomeScreen = () => {
   const [showList, setShowList] = useState(false);
   const [sortList, setSortList] = useState(false);
+  const [searchWord, setSearchWord] = useState<string>(''); 
   const [favorite, setFavorite] = useState(false);
   // const [colourList, setColourList] = useState([]);
 
@@ -45,6 +46,7 @@ const HomeScreen = () => {
             sortState={sortList}
             onSortList={handleSortList}
             onColourPress={handleColourBlockPress}
+            onChangeText={setSearchWord}
           />
         )}
       </View>

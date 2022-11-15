@@ -3,13 +3,11 @@ import {StyleSheet, TextInput, View} from 'react-native';
 import Search from '../../../assets/icons/Search.svg';
 import {COLOR_GREYBLUE, COLOR_WHITE} from '../../../theme/colors';
 
-// interface Props {
-//   onChange: () => void;
-// }
+interface Props {
+  onChangeText: (text: string) => void;
+}
 
-const SearchInput = () => {
-  const [searchWord, setSearchWord] = useState<string>('');
-
+const SearchInput: React.FC<Props> = ({onChangeText}) => {
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
@@ -17,8 +15,7 @@ const SearchInput = () => {
       </View>
       <TextInput
         style={styles.input}
-        value={searchWord}
-        onChangeText={event => setSearchWord(event.target.value)}
+        onChangeText={onChangeText}
         placeholder="Search..."
         placeholderTextColor={COLOR_GREYBLUE}
       />

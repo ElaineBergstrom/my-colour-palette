@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import SearchBar from '../Search/SearchBar'
+import SearchBar from '../Search/SearchBar';
 import ColourBlock from './ColourBlock';
 
 interface Props {
@@ -9,12 +9,20 @@ interface Props {
   onPressFavorite: () => void;
   onSortList: () => void;
   onColourPress: () => void;
+  onChangeText: (text: string) => void;
 }
 
-const ColoursList: React.FC<Props> = ({sortState, onSortList, onColourPress, onPressFavorite, favoriteState}) => {
+const ColoursList: React.FC<Props> = ({
+  sortState,
+  onSortList,
+  onColourPress,
+  onPressFavorite,
+  favoriteState,
+  onChangeText,
+}) => {
   return (
     <View style={styles.container}>
-      <SearchBar sortState={sortState} onPressSort={onSortList} />
+      <SearchBar sortState={sortState} onPressSort={onSortList} onChangeText={onChangeText} />
       <ColourBlock onPressFavorite={onPressFavorite} favoriteState={favoriteState} onPress={onColourPress} />
     </View>
   );

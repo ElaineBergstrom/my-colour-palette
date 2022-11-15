@@ -6,12 +6,13 @@ import SearchInput from './SearchInput/SearchInput';
 interface Props {
   sortState: boolean;
   onPressSort: () => void;
+  onChangeText: (text: string) => void;
 }
 
-const SearchBar: React.FC<Props> = ({sortState, onPressSort}) => {
+const SearchBar: React.FC<Props> = ({sortState, onPressSort, onChangeText}) => {
   return (
     <View style={styles.container}>
-      <SearchInput />
+      <SearchInput onChangeText={onChangeText} />
       <SortButton sortState={sortState} onPressSort={onPressSort} />
     </View>
   );
